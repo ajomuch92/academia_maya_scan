@@ -1,3 +1,4 @@
+import 'package:academia_maya_scan/views/Scan.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:lottie/lottie.dart';
@@ -27,7 +28,12 @@ class _IndexState extends State<Index> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ScanView()),
+          );
+        },
         child: const Icon(
           Ionicons.scan
         ),
